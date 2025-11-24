@@ -8,6 +8,7 @@ footer {
 	background-color: var(--background-teal);
 	color: var(--text-cream);
 	height: 506.24px;
+	padding: 78.78px 0 0 165px;
 }
 
 footer img {
@@ -37,8 +38,6 @@ footer nav a {
 .footer__container {
 	display: flex;
 	width: 1596px;
-	margin-left: 165px;
-	margin-top: 78.87px;
 }
 
 .footer__first {

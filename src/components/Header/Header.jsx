@@ -25,7 +25,7 @@ function Header() {
 				<nav>
 					<a href='/'>Главная</a>
 					<a href='/builder'>Конструктор</a>
-					<a href='/orders'>Заказы</a>
+					<a href='/auth'>Войти</a>
 				</nav>
 			</header>
 		</div>
