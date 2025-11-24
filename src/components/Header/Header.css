@@ -1,0 +1,41 @@
+header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background-color: var(--background-teal);
+	color: var(--text-cream);
+	gap: 19px;
+	height: 108px;
+}
+
+header div {
+	display: flex;
+	align-items: center;
+	gap: 19px;
+	width: 181.24px;
+	height: 63px;
+	margin-left: 99px;
+}
+
+header div span {
+	font-size: 24px;
+}
+
+header div span em {
+	font-style: italic;
+	font-size: 16px;
+}
+
+header nav {
+	display: flex;
+	align-items: center;
+	gap: 69px;
+	margin-right: 89px;
+}
+
+nav a {
+	text-decoration: none;
+	color: inherit;
+	font-size: 20px;
+	font-style: normal;
+}

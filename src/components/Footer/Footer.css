@@ -1,0 +1,93 @@
+footer,
+footer * {
+	font-family: 'TT Travels', sans-serif;
+	font-weight: 500;
+}
+
+footer {
+	background-color: var(--background-teal);
+	color: var(--text-cream);
+	height: 506.24px;
+}
+
+footer img {
+	height: 87px;
+	width: 264px;
+	margin-top: 23px;
+	margin-bottom: 29px;
+}
+
+footer hr {
+	width: 1596px;
+	margin-top: 28px;
+	margin-bottom: 38.05px;
+}
+
+footer nav {
+	display: flex;
+	flex-direction: column;
+	gap: 30.35px;
+}
+
+footer nav a {
+	font-weight: 500;
+	font-size: 15px;
+}
+
+.footer__container {
+	display: flex;
+	width: 1596px;
+	margin-left: 165px;
+	margin-top: 78.87px;
+}
+
+.footer__first {
+	display: flex;
+	flex-direction: column;
+	margin-right: 227px;
+}
+
+.footer__first span {
+	width: 531px;
+	word-wrap: break-word;
+	overflow-wrap: break-word;
+	line-height: 200%;
+	font-size: 16px;
+}
+
+.footer__first span em {
+	font-weight: 800;
+	font-style: normal;
+}
+
+.footer__title {
+	font-family: 'Montserrat', sans-serif;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 100%;
+	font-size: 20px;
+	margin-bottom: 49px;
+}
+
+.footer__second {
+	margin-right: 201px;
+}
+
+.footer__second,
+.footer_third {
+	display: flex;
+	flex-direction: column;
+}
+.footer_third div {
+	display: flex;
+	flex-direction: column;
+	gap: 30.35px;
+	font-weight: 500;
+	font-size: 15px;
+}
+
+.footer__copyright {
+	font-size: 16px;
+	display: block;
+	text-align: center;
+}

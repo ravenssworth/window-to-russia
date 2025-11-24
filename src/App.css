@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+/* TT Travels */
+@font-face {
+	font-family: 'TT Travels';
+	src: url('./assets/fonts/TTTravels-Regular.woff2') format('woff2');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'TT Travels';
+	src: url('./assets/fonts/TTTravels-Medium.woff2') format('woff2');
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'TT Travels';
+	src: url('./assets/fonts/TTTravels-ExtraBold.woff2') format('woff2');
+	font-weight: 800;
+	font-style: normal;
+	font-display: swap;
+}
+
+:root {
+	/* Для хедера и футера*/
+	--text-cream: #fef1e1;
+	--background-teal: #06373e;
+	--svg-stroke-sand: #e7b698;
+
+	/* Для главной страницы*/
+	--text-primary: #103034;
+	--text-accent: #c87452;
+	--text-light: #ffffff;
+	--text-dark: #000000;
+	--text-muted: #425b60;
+}
+
+* {
+	font-family: 'Montserrat', sans-serif;
+}
+
+html,
+body {
+	margin: 0;
+	height: 100%;
+}
+
+.home {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}

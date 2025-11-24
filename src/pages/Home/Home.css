@@ -1,0 +1,128 @@
+main {
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+}
+
+main h1 {
+	font-size: 60px;
+	font-weight: bold;
+	margin: 71px 88px 0 99px;
+	color: var(--text-primary);
+}
+
+main h1 em {
+	font-style: normal;
+	color: var(--text-accent);
+}
+
+.home__section-first {
+	display: flex;
+	flex-direction: column;
+}
+
+.home__section-first h2 {
+	font-size: 32px;
+	color: var(--text-muted);
+	margin: 0 88px 70px 99px;
+	font-weight: normal;
+}
+
+.home__section-first img {
+	height: 682px;
+	width: 1085px;
+}
+
+.section-first__content {
+	display: flex;
+	flex-direction: row;
+	position: relative;
+}
+
+.section-first__text {
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+	position: absolute;
+	width: 868px;
+	height: 498px;
+	background-color: var(--text-primary);
+	top: 104px;
+	left: 964px;
+	color: var(--text-light);
+}
+
+.section-first__title {
+	font-size: 48px;
+	margin-top: 57px;
+	margin-left: 94px;
+	line-height: 108%;
+	height: 192px;
+}
+
+.section-first__title em {
+	font-weight: 700;
+	font-style: italic;
+}
+
+.section-first__description {
+	font-weight: 500;
+	height: 197px;
+	margin-left: 94px;
+	line-height: 200%;
+}
+
+.section-first__description em {
+	font-weight: 800;
+	font-style: normal;
+}
+
+.section-first__text hr {
+	width: 681px;
+}
+
+.home__section-second {
+	margin: 128px 83.17px 93.13px 96px;
+}
+
+.home__section-second h2 {
+	font-size: 40px;
+	font-style: normal;
+	font-weight: 400;
+	text-align: center;
+}
+
+.section-second__blocks {
+	display: flex;
+	gap: 27.06px;
+}
+
+.section-second__block {
+	width: 568.83px;
+	height: 266px;
+	background-color: rgba(234, 159, 116, 0.39);
+	border-radius: 14px;
+}
+
+.section-second__block ol {
+	list-style-type: disc;
+}
+
+.section-second__block ol li {
+	list-style: disc inside none;
+	font-family: 'TT Travels', sans-serif;
+	line-height: 133%;
+}
+
+.block__title {
+	font-size: 32px;
+	margin: 45px 0 0 35px;
+	display: block;
+}
+
+.section-second__block hr {
+	width: 504.88px;
+	margin: 17.6px 0 0 38px;
+	border-color: rgba(0, 0, 0, 0.4);
+	font-weight: 400;
+}
