@@ -49,6 +49,10 @@ body {
 	height: 100%;
 }
 
+body {
+	background-color: rgba(253, 240, 224, 0.24);
+}
+
 .home {
 	display: flex;
 	flex-direction: column;

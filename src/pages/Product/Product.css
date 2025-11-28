@@ -1,0 +1,190 @@
+.product__top {
+	background-image: url('../../assets/background.png');
+	height: 310px;
+	background-size: cover;
+	background-position: center bottom 20%;
+}
+
+.product__top h1 {
+	text-align: center;
+	margin: 71px 0 0 0;
+	height: 93px;
+	font-weight: bold;
+	font-size: 60px;
+	color: #be3d09;
+}
+
+.product__top h2 {
+	text-align: center;
+	height: 48px;
+	font-weight: normal;
+	font-size: 32px;
+	margin: 0;
+}
+
+.product__content {
+	padding: 71px 125px 0 165px;
+}
+
+.product__link {
+	display: block;
+	color: var(--background-teal);
+	font-weight: normal;
+	font-size: 32px;
+	margin: 0 0 73px 25px;
+}
+
+.product__item {
+	display: flex;
+	gap: 64px;
+	flex-direction: row;
+}
+
+.product__img {
+	height: 777px;
+	width: 691px;
+	background-color: rgba(0, 78, 89, 0.03);
+	border-radius: 20px;
+}
+
+.product img {
+	height: 559px;
+	width: 580px;
+	margin: 52px 66px 0 66px;
+}
+
+.product__name {
+	display: block;
+	font-weight: normal;
+	font-size: 36px;
+	margin: 52.3px 0 0 162.59px;
+	color: rgba(6, 55, 62, 0.8);
+}
+
+.product__info {
+	height: 776px;
+	width: 868px;
+	background-color: rgba(0, 78, 89, 0.03);
+	border-radius: 20px;
+}
+
+.info__name {
+	display: block;
+	text-align: center;
+	height: 59px;
+	margin: 47px 0 103px 0;
+	font-weight: 500;
+	font-size: 48px;
+	color: var(--background-teal);
+}
+
+.info__description {
+	width: 611px;
+	height: 256px;
+	margin: 0 auto 36px auto;
+}
+
+.info__stroke {
+	display: flex;
+	gap: 80px;
+	font-size: 32px;
+	font-weight: 500;
+	color: var(--background-teal);
+	height: 64px;
+	border-bottom: 2px solid rgba(66, 91, 96, 0.3);
+}
+
+.info__value {
+	display: flex;
+	align-items: center;
+	font-weight: normal;
+	font-size: 32px;
+}
+
+.info__title {
+	display: flex;
+	align-items: center;
+	margin: 0 0 0 27px;
+	width: 176px;
+}
+
+.product__rating {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+	margin: 0 0 36.4px 134px;
+}
+
+.product__rating-value {
+	font-size: 20px;
+}
+
+.product__btn {
+	display: block;
+	margin: auto;
+	width: 667px;
+	height: 140.42px;
+	background-color: var(--text-accent);
+	border-radius: 20px;
+	border: none;
+	color: rgba(255, 255, 255, 0.77);
+	font-weight: 500;
+	font-size: 36px;
+}
+
+.product__reviews-section {
+	margin: 55px 99px 56px 99px;
+	background-color: rgba(0, 78, 89, 0.03);
+	border-radius: 20px;
+	padding: 59px 99px 56px 99px;
+}
+
+.reviews-section__title {
+	display: block;
+	text-align: center;
+	margin: 0 0 75px 0;
+	font-weight: 500;
+	color: #06373e;
+}
+
+.reviews-section__reviews {
+	display: flex;
+	flex-direction: column;
+	gap: 32px;
+}
+
+.review {
+	display: flex;
+	flex-direction: column;
+	gap: 19px;
+	padding: 30px 44px 31px 46px;
+	background-color: #fffcf8;
+	border: 1px solid rgba(66, 91, 96, 0.52);
+	border-radius: 15px;
+}
+
+.review__name {
+	font-family: 'TT Travels', sans-serif;
+	font-weight: 500;
+	font-size: 24px;
+}
+
+.review__text {
+	font-family: 'TT Travels', sans-serif;
+	font-weight: 400;
+	font-size: 24px;
+}
+
+.reviews-section__pagination {
+	display: flex;
+	flex-direction: row;
+	gap: 79.67px;
+	justify-content: center;
+	align-items: center;
+	margin: 49px 0 0 0;
+}
+
+.pagination__numbers {
+	color: rgba(6, 55, 62, 0.8);
+	font-size: 36px;
+}

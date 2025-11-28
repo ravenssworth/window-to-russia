@@ -2,12 +2,14 @@ import { Route, Routes } from 'react-router-dom'
 import './App.css'
 import Home from './pages/Home/Home.jsx'
 import Auth from './pages/Auth/Auth.jsx'
+import Products from './pages/Products/Products.jsx'
 
 function App() {
 	return (
 		<Routes>
 			<Route path='/' element={<Home />} />
 			<Route path='/auth' element={<Auth />} />
+			<Route path='/products' element={<Products />} />
 		</Routes>
 	)
 }
