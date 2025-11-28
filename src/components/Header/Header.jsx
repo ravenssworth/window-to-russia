@@ -26,6 +26,9 @@ function Header() {
 					<a href='/'>Главная</a>
 					<a href='/products'>Товары</a>
 					<a href='/auth'>Войти</a>
+					<a href='/cart'>Корзина</a>
+					<a href='/admin'>Админ-панель</a>
+					<a href='/orders'>Мои заказы</a>
 				</nav>
 			</header>
 		</div>

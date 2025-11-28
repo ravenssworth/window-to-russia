@@ -2,6 +2,7 @@ import './Products.css'
 import Header from '../../components/Header/Header.jsx'
 import Footer from '../../components/Footer/Footer.jsx'
 import productImg from '../../assets/product.png'
+import { Link } from 'react-router-dom'
 
 const Products = () => {
 	return (
@@ -12,21 +13,27 @@ const Products = () => {
 					<h1>Товары</h1>
 					<h2>СОЗДАЙТЕ СВОИ ИДЕАЛЬНЫЕ ШТОРЫ</h2>
 				</div>
-				<section className='products__items items'>
-					<div className='items__item item'>
+				<section className='products__products-items products-items'>
+					<div className='products-items__products-item products-item'>
 						<img src={productImg} alt='' />
-						<div className='item__info info'>
-							<div className='info__name'>Штора “Вариант 1”</div>
-							<div className='info__price'>9 999 ₽</div>
-							<div className='info__description description'>
-								<span className='description__width'>Ширина: 140 см</span>
-								<span className='description__height'>Высота: 210 см</span>
-								<span className='description__material'>Материал: Блэкаут</span>
-								<span className='description__color'>Цвет: Серый</span>
+						<div className='products-item__products-info products-info'>
+							<div className='products-info__name'>Штора “Вариант 1”</div>
+							<div className='products-info__price'>9 999 ₽</div>
+							<div className='products-info__description description'>
+								<span className='products-description__width'>
+									Ширина: 140 см
+								</span>
+								<span className='products-description__height'>
+									Высота: 210 см
+								</span>
+								<span className='products-description__material'>
+									Материал: Блэкаут
+								</span>
+								<span className='products-description__color'>Цвет: Серый</span>
 							</div>
 						</div>
-						<div className='product__rating product'>
-							<div className='product__stars'>
+						<div className='products-item__rating'>
+							<div className='products-item__stars'>
 								<svg
 									width='23'
 									height='23'
@@ -41,9 +48,13 @@ const Products = () => {
 								</svg>
 							</div>
 
-							<span className='product__rating-value'>5.0 (24 отзыва)</span>
+							<span className='products-item__rating-value'>
+								5.0 (24 отзыва)
+							</span>
 						</div>
-						<button className='product__btn'>Подробнее</button>
+						<button className='products-item__btn'>
+							<Link to='/product'>Подробнее</Link>
+						</button>
 					</div>
 				</section>
 			</main>

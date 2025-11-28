@@ -1,0 +1,166 @@
+.cart__title {
+	text-align: center;
+	margin: 71px 0 0 0;
+	height: 93px;
+	font-weight: bold;
+	font-size: 60px;
+	color: #be3d09;
+}
+
+.cart__description {
+	text-align: center;
+	height: 48px;
+	font-weight: normal;
+	font-size: 32px;
+	margin: 0;
+	text-transform: uppercase;
+}
+
+.cart__content {
+	display: flex;
+	flex-direction: row;
+	gap: 152px;
+	padding: 185px 130px 109px 133px;
+}
+
+.cart__left-column {
+	display: flex;
+	flex-direction: column;
+	gap: 35px;
+}
+
+.cart__cart-item {
+	display: flex;
+	flex-direction: row;
+	gap: 115.19px;
+	padding: 31px 120.6px 44.4px 121px;
+	height: 268px;
+	width: 798px;
+	background-color: rgba(0, 78, 89, 0.03);
+	border-radius: 20px;
+	box-sizing: border-box;
+}
+
+.cart-item img {
+	height: 206.53px;
+	width: 198.81px;
+}
+
+.cart-item-info {
+	display: flex;
+	flex-direction: column;
+}
+
+.cart-item-info__name {
+	font-weight: 500;
+	font-size: 24px;
+	color: var(--text-muted);
+	height: 34.8px;
+	margin: 14px 0 20.4px 0;
+}
+
+.cart-item-info__color,
+.cart-item-info__width,
+.cart-item-info__height,
+.cart-item-info__material {
+	font-size: 13px;
+	color: var(--background-teal);
+}
+
+.cart-item-info__price-count {
+	display: flex;
+	align-items: end;
+	gap: 40.44px;
+}
+
+.cart-item-info__price {
+	display: block;
+	color: #be3d09;
+	font-size: 24px;
+	font-weight: 500;
+	height: 29px;
+	margin-top: 24.8px;
+}
+
+.count__plus,
+.count__minus {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 27px;
+	height: 26px;
+	color: var(--background-teal);
+	background-color: rgba(66, 91, 96, 0.05);
+	border: none;
+	font-size: 20px;
+}
+
+.count {
+	display: flex;
+	flex-direction: row;
+	gap: 6px;
+}
+
+.count__number {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 41px;
+	height: 26px;
+	background-color: rgba(255, 255, 255, 0.05);
+	font-size: 20px;
+	color: var(--background-teal);
+	border: 1px solid rgba(66, 91, 96, 0.4);
+}
+
+.cart__right-column {
+	display: flex;
+	flex-direction: column;
+	background-color: rgba(0, 78, 89, 0.03);
+	border-radius: 20px;
+	width: 708px;
+	height: 541px;
+}
+
+.cart__right-column h3 {
+	font-weight: 500;
+	font-size: 40px;
+	color: var(--text-muted);
+	margin: 22px auto 82px auto;
+	text-align: center;
+}
+
+.cart-total {
+	display: flex;
+	flex-direction: column;
+	gap: 49px;
+	margin: 0 auto;
+}
+
+.cart-total__item {
+	font-family: 'TT Travels', sans-serif;
+	font-weight: 400;
+	display: flex;
+	font-size: 24px;
+	width: 427px;
+	justify-content: space-between;
+	color: var(--text-muted);
+}
+
+.cart-total__total-label {
+	font-size: 32px;
+	font-weight: 800;
+}
+
+.cart__right-column button {
+	display: block;
+	margin: 59px auto 0 auto;
+	width: 483.23px;
+	height: 90.75px;
+	background-color: var(--text-accent);
+	border-radius: 20px;
+	border: none;
+	color: rgba(255, 255, 255, 0.87);
+	font-weight: 500;
+	font-size: 32px;
+}
