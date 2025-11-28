@@ -1,4 +1,136 @@
-.orders {
-  /* Стили для страницы заказов */
+.orders__title {
+	text-align: center;
+	margin: 71px 0 0 0;
+	height: 93px;
+	font-weight: bold;
+	font-size: 60px;
+	color: #be3d09;
 }
 
+.orders__description {
+	text-align: center;
+	height: 48px;
+	font-weight: normal;
+	font-size: 32px;
+	margin: 0;
+	text-transform: uppercase;
+}
+
+.orders__content {
+	padding: 102px 131px 78px 125px;
+}
+
+.orders-order__id-date-status-total {
+	display: flex;
+	gap: 39px;
+	align-items: center;
+}
+
+.orders-order__id-date {
+	display: flex;
+	flex-direction: column;
+
+	gap: 10px;
+	width: 173px;
+}
+
+.orders-order__id-date span {
+	font-size: 24px;
+	font-weight: 500;
+	color: var(--text-muted);
+}
+
+.orders-order__status {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 201px;
+	height: 50.64px;
+	background-color: rgba(200, 207, 194, 0.51);
+	border: 1px solid rgba(66, 91, 96, 0.52);
+	border-radius: 15px;
+	font-size: 20px;
+	color: var(--text-muted);
+}
+
+.orders-order__total {
+	font-family: 'TT Travels', sans-serif;
+	font-weight: 400;
+	margin-left: auto;
+	font-size: 24px;
+}
+
+.orders-order__total em {
+	font-family: 'TT Travels', sans-serif;
+	font-weight: 400;
+	font-size: 24px;
+	color: #be3d09;
+	font-style: normal;
+	margin: 0 0 0 16px;
+}
+
+.orders__orders-order {
+	padding: 32px 107px 63px 119px;
+	width: 1665px;
+	height: 403px;
+	background-color: rgba(0, 78, 89, 0.03);
+	border-radius: 20px;
+	box-sizing: border-box;
+}
+
+.orders-order__order-item {
+}
+
+.order-item img {
+	width: 195px;
+	height: 203px;
+}
+
+.order-item__img-name-description-button-count {
+	display: flex;
+	gap: 71px;
+	margin: 37px 0 0 0;
+}
+
+.order-item__name {
+	display: block;
+	font-size: 32px;
+	font-weight: 500;
+	color: var(--text-muted);
+	margin: 0 0 25px 0;
+}
+
+.order-item__description-button {
+	display: flex;
+	gap: 42.04px;
+}
+
+.order-item__description {
+	display: flex;
+	flex-direction: column;
+}
+
+.order-item__description span {
+	font-size: 15px;
+	font-weight: 400;
+	color: var(--background-teal);
+}
+
+.order-item__button {
+	font-size: 20px;
+	font-weight: 400;
+	color: var(--background-teal);
+	background: none;
+	border: 1px solid rgba(66, 91, 96, 0.52);
+	border-radius: 15px;
+	width: 213px;
+	height: 60px;
+}
+
+.order-item__count {
+	display: block;
+	font-size: 15px;
+	font-weight: 400;
+	color: var(--background-teal);
+	margin: 15px 0 0 0;
+}
