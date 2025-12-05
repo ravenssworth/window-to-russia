@@ -1,4 +1,200 @@
 .admin {
-  /* Стили для админ-панели */
+	padding: 21px 98px 76px 98px;
 }
 
+.admin__title {
+	text-align: center;
+	margin: 0 0 0 0;
+	height: 93px;
+	font-weight: bold;
+	font-size: 60px;
+	color: #be3d09;
+}
+
+.admin__buttons {
+	display: flex;
+}
+
+.admin__tab {
+	font-size: 32px;
+	font-weight: 500;
+	color: var(--text-muted);
+	background: none;
+	border: none;
+	border-bottom: 3px solid #a5a5a5;
+	padding: 0 21px 22px 0;
+	cursor: pointer;
+}
+
+.admin__buttons :last-child {
+	padding: 0 0 22px 21px;
+}
+.admin__tab--active {
+	border-bottom: 3px solid #e6713f;
+}
+
+.admin__products__top {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.admin__products__top button {
+	border-radius: 15px;
+	border: 1px solid rgba(66, 91, 96, 0.52);
+	width: 201px;
+	height: 50.64px;
+	color: var(--background-teal);
+	font-weight: 400;
+	font-size: 20px;
+	cursor: pointer;
+	background-color: rgba(200, 207, 194, 0.51);
+}
+
+.admin__admin-products-title,
+.admin__admin-orders-title {
+	margin: 34px 0 47px 0;
+	height: 39px;
+	font-weight: bold;
+	font-size: 32px;
+	color: var(--text-muted);
+	font-weight: 500;
+}
+
+.admin-table__table {
+	font-size: 24px;
+	color: var(--text-muted);
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.admin-table__table th {
+	font-family: 'TT Travels', sans-serif;
+	font-weight: 500;
+	font-style: normal;
+	text-align: center;
+	background-color: #d9d9d9;
+	padding: 16px 12px;
+	border: 1px solid #ccc;
+	border: none;
+}
+
+.admin-table__table td {
+	font-family: 'TT Travels', sans-serif;
+	font-weight: 500;
+	font-style: normal;
+	text-align: center;
+	padding: 12px;
+	border: 1px solid #ccc;
+	border: none;
+}
+
+.admin-table__table tbody tr {
+	font-style: normal;
+	background-color: rgba(156, 168, 169, 0.15);
+}
+
+.admin-table__table tbody tr:hover {
+	font-style: normal;
+	background-color: rgba(156, 168, 169, 0.25);
+}
+
+.color-indicator {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 8px;
+}
+
+.color-dot {
+	width: 16px;
+	height: 16px;
+	border-radius: 50%;
+	background-color: #ffffff;
+	border: 1px solid #ccc;
+}
+
+.product-image {
+	width: 50px;
+	height: 50px;
+	object-fit: cover;
+	border-radius: 4px;
+}
+
+.actions {
+	display: flex;
+	gap: 8px;
+	justify-content: center;
+}
+
+.actions__btn {
+	width: 36px;
+	height: 36px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 16px;
+	transition: background-color 0.2s;
+}
+
+.actions__btn--edit {
+	font-size: 24px;
+	border-radius: 8px;
+	background: none;
+	padding: 10px;
+}
+
+.actions__btn--edit:hover {
+	background-color: rgba(200, 207, 194, 0.51);
+}
+
+.actions__btn--delete {
+	font-size: 24px;
+	border-radius: 8px;
+	background: none;
+	padding: 10px;
+}
+
+.actions__btn--delete:hover {
+	background-color: #ffcdd2;
+}
+
+.admin-table__row--editing {
+	background-color: rgba(227, 242, 253, 0.3);
+}
+
+.admin-table__row--editing:hover {
+	background-color: rgba(227, 242, 253, 0.4);
+}
+
+.admin-table__row--editing input {
+	font-size: 24px;
+	font-family: 'TT Travels', sans-serif;
+}
+
+.actions__btn--save {
+	font-size: 24px;
+	border-radius: 8px;
+	background: none;
+	color: var(--background-teal);
+	padding: 10px;
+}
+
+.actions__btn--save:hover {
+	background-color: #c8e6c9;
+}
+
+.actions__btn--cancel {
+	font-size: 24px;
+	border-radius: 8px;
+	background: none;
+	color: #be3d09;
+	padding: 10px;
+}
+
+.actions__btn--cancel:hover {
+	background-color: #ffe0b2;
+}

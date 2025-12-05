@@ -15,9 +15,17 @@
 
 .auth__container {
 	width: 1213px;
-	height: 794px;
 	background-color: #fcfbf8;
 	border-radius: 20px;
+	transition: height 0.3s ease;
+}
+
+.auth__container--login {
+	height: 650px;
+}
+
+.auth__container--register {
+	height: 1050px;
 }
 
 .auth__title {
@@ -63,6 +71,7 @@
 	width: 100%;
 	height: 3.5px;
 	background-color: #a5a5a5;
+	margin: 0 0 20px 0;
 }
 
 /* Активная часть полосы */
@@ -86,7 +95,7 @@
 
 .auth__form {
 	width: 601px;
-	margin: 60px 307px 0 305px;
+	margin: 20px 307px 0 305px;
 }
 
 .auth__form label {
@@ -108,7 +117,8 @@
 }
 
 .auth__submit {
-	margin: 98px 419px 0 420px;
+	display: block;
+	margin: 34px auto 0 auto;
 	width: 374px;
 	height: 59px;
 	background-color: #dc764a;

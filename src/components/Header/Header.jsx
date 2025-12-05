@@ -1,11 +1,30 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Header.css'
+import storage from '../../utils/storage.js'
+import avatar from '../../assets/avatar.png'
 
 function Header() {
+	const [user] = useState(() => storage.getUser())
+
+	const isAuthenticated = Boolean(user)
+	const isAdmin =
+		user?.role === 'ADMIN' ||
+		user?.role === 'ROLE_ADMIN' ||
+		(String(user?.role || '')
+			.toUpperCase()
+			.includes('ADMIN') ??
+			false)
+
+	const displayName = user?.username || user?.nickname || 'Профиль'
+	const handleLogout = () => {
+		storage.clearAuth()
+		globalThis.location.href = '/auth'
+	}
+
 	return (
 		<div>
 			<header>
-				<div>
+				<div className='header__logo'>
 					<svg
 						width='59'
 						height='63'
@@ -25,10 +44,22 @@ function Header() {
 				<nav>
 					<a href='/'>Главная</a>
 					<a href='/products'>Товары</a>
-					<a href='/auth'>Войти</a>
-					<a href='/cart'>Корзина</a>
-					<a href='/admin'>Админ-панель</a>
-					<a href='/orders'>Мои заказы</a>
+					{isAuthenticated && <a href='/orders'>Мои заказы</a>}
+					{isAuthenticated && <a href='/cart'>Корзина</a>}
+					{isAdmin && <a href='/admin'>Админ-панель</a>}
+					{isAuthenticated ? (
+						<div className='header__user'>
+							<img src={avatar} alt='avatar' className='header__avatar' />
+							<span className='header__nickname'>{displayName}</span>
+							<div className='header__user-menu'>
+								<button type='button' onClick={handleLogout}>
+									Выйти
+								</button>
+							</div>
+						</div>
+					) : (
+						<a href='/auth'>Войти</a>
+					)}
 				</nav>
 			</header>
 		</div>

@@ -8,7 +8,7 @@ header {
 	height: 108px;
 }
 
-header div {
+.header__logo {
 	display: flex;
 	align-items: center;
 	gap: 19px;
@@ -29,7 +29,7 @@ header div span em {
 header nav {
 	display: flex;
 	align-items: center;
-	gap: 69px;
+	gap: 32px;
 	margin-right: 89px;
 }
 
@@ -38,4 +38,57 @@ nav a {
 	color: inherit;
 	font-size: 20px;
 	font-style: normal;
+}
+
+.header__user {
+	display: inline-flex;
+	align-items: center;
+	cursor: pointer;
+	flex-direction: column;
+	gap: 10px;
+	color: inherit;
+	font-size: 18px;
+	position: relative;
+}
+
+.header__avatar {
+	width: 64px;
+	height: 64px;
+	border-radius: 50%;
+	object-fit: cover;
+}
+
+.header__nickname {
+	white-space: nowrap;
+	font-size: 15px;
+}
+
+.header__user-menu {
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	transform: translateX(-50%);
+	background: #fcfbf8;
+	color: #103034;
+	border-radius: 10px;
+	padding: 8px 12px;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+	display: none;
+	z-index: 5;
+	min-width: 120px;
+	text-align: center;
+}
+
+.header__user-menu button {
+	background: none;
+	border: none;
+	color: inherit;
+	font-size: 16px;
+	cursor: pointer;
+	padding: 0;
+}
+
+.header__user:hover .header__user-menu,
+.header__user:focus-within .header__user-menu {
+	display: block;
 }
