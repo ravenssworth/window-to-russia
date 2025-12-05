@@ -1,13 +1,13 @@
 .admin {
-	padding: 21px 98px 76px 98px;
+	padding: 1.09vw 5.1vw 3.96vw 5.1vw;
 }
 
 .admin__title {
 	text-align: center;
-	margin: 0 0 0 0;
-	height: 93px;
+	margin: 0;
+	height: 4.84vw;
 	font-weight: bold;
-	font-size: 60px;
+	font-size: 3.13vw;
 	color: #be3d09;
 }
 
@@ -16,21 +16,22 @@
 }
 
 .admin__tab {
-	font-size: 32px;
+	font-size: 1.67vw;
 	font-weight: 500;
 	color: var(--text-muted);
 	background: none;
 	border: none;
-	border-bottom: 3px solid #a5a5a5;
-	padding: 0 21px 22px 0;
+	border-bottom: 0.16vw solid #a5a5a5;
+	padding: 0 1.09vw 1.15vw 0;
 	cursor: pointer;
 }
 
 .admin__buttons :last-child {
-	padding: 0 0 22px 21px;
+	padding: 0 0 1.15vw 1.09vw;
 }
+
 .admin__tab--active {
-	border-bottom: 3px solid #e6713f;
+	border-bottom: 0.16vw solid #e6713f;
 }
 
 .admin__products__top {
@@ -40,29 +41,28 @@
 }
 
 .admin__products__top button {
-	border-radius: 15px;
+	border-radius: 0.78vw;
 	border: 1px solid rgba(66, 91, 96, 0.52);
-	width: 201px;
-	height: 50.64px;
+	width: 10.47vw;
+	height: 2.64vw;
 	color: var(--background-teal);
 	font-weight: 400;
-	font-size: 20px;
+	font-size: 1.04vw;
 	cursor: pointer;
 	background-color: rgba(200, 207, 194, 0.51);
 }
 
 .admin__admin-products-title,
 .admin__admin-orders-title {
-	margin: 34px 0 47px 0;
-	height: 39px;
-	font-weight: bold;
-	font-size: 32px;
+	margin: 1.77vw 0 2.45vw 0;
+	height: 2.03vw;
+	font-size: 1.67vw;
 	color: var(--text-muted);
 	font-weight: 500;
 }
 
 .admin-table__table {
-	font-size: 24px;
+	font-size: 1.25vw;
 	color: var(--text-muted);
 	width: 100%;
 	border-collapse: collapse;
@@ -74,8 +74,7 @@
 	font-style: normal;
 	text-align: center;
 	background-color: #d9d9d9;
-	padding: 16px 12px;
-	border: 1px solid #ccc;
+	padding: 1.5104vw 0.63vw;
 	border: none;
 }
 
@@ -84,14 +83,29 @@
 	font-weight: 500;
 	font-style: normal;
 	text-align: center;
-	padding: 12px;
-	border: 1px solid #ccc;
+	padding: 0.63vw;
 	border: none;
 }
 
 .admin-table__table tbody tr {
 	font-style: normal;
 	background-color: rgba(156, 168, 169, 0.15);
+	position: relative;
+}
+
+.admin-table__table tbody tr::after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 1.5104vw;
+	right: 1.5104vw;
+	height: 0.072083vw;
+	background-color: rgba(165, 165, 165, 0.57);
+}
+
+/* Убираем полосу у последней строки */
+.admin-table__table tbody tr:last-child::after {
+	display: none;
 }
 
 .admin-table__table tbody tr:hover {
@@ -103,48 +117,48 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	gap: 8px;
+	gap: 0.42vw;
 }
 
 .color-dot {
-	width: 16px;
-	height: 16px;
+	width: 0.83vw;
+	height: 0.83vw;
 	border-radius: 50%;
 	background-color: #ffffff;
 	border: 1px solid #ccc;
 }
 
 .product-image {
-	width: 50px;
-	height: 50px;
+	width: 2.6vw;
+	height: 2.6vw;
 	object-fit: cover;
-	border-radius: 4px;
+	border-radius: 0.21vw;
 }
 
 .actions {
 	display: flex;
-	gap: 8px;
+	gap: 0.42vw;
 	justify-content: center;
 }
 
 .actions__btn {
-	width: 36px;
-	height: 36px;
+	width: 1.88vw;
+	height: 1.88vw;
 	border: none;
-	border-radius: 4px;
+	border-radius: 0.21vw;
 	cursor: pointer;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	font-size: 16px;
+	font-size: 0.83vw;
 	transition: background-color 0.2s;
 }
 
 .actions__btn--edit {
-	font-size: 24px;
-	border-radius: 8px;
+	font-size: 1.25vw;
+	border-radius: 0.42vw;
 	background: none;
-	padding: 10px;
+	padding: 0.52vw;
 }
 
 .actions__btn--edit:hover {
@@ -152,10 +166,10 @@
 }
 
 .actions__btn--delete {
-	font-size: 24px;
-	border-radius: 8px;
+	font-size: 1.25vw;
+	border-radius: 0.42vw;
 	background: none;
-	padding: 10px;
+	padding: 0.52vw;
 }
 
 .actions__btn--delete:hover {
@@ -171,16 +185,16 @@
 }
 
 .admin-table__row--editing input {
-	font-size: 24px;
+	font-size: 1.25vw;
 	font-family: 'TT Travels', sans-serif;
 }
 
 .actions__btn--save {
-	font-size: 24px;
-	border-radius: 8px;
+	font-size: 1.25vw;
+	border-radius: 0.42vw;
 	background: none;
 	color: var(--background-teal);
-	padding: 10px;
+	padding: 0.52vw;
 }
 
 .actions__btn--save:hover {
@@ -188,13 +202,91 @@
 }
 
 .actions__btn--cancel {
-	font-size: 24px;
-	border-radius: 8px;
+	font-size: 1.25vw;
+	border-radius: 0.42vw;
 	background: none;
 	color: #be3d09;
-	padding: 10px;
+	padding: 0.52vw;
 }
 
 .actions__btn--cancel:hover {
-	background-color: #ffe0b2;
+	background-color: #ffcdd2;
+}
+
+.admin__error-message {
+	color: red;
+	margin: 0.52vw 0;
+	font-size: 0.83vw;
+}
+
+.admin__loading-message {
+	margin: 1.04vw 0;
+	font-size: 0.94vw;
+}
+
+.admin__empty-message {
+	margin: 1.04vw 0;
+	font-size: 0.94vw;
+}
+
+.admin-table__input {
+	width: 100%;
+	padding: 0.21vw;
+	border: 1px solid #ccc;
+	border-radius: 0.21vw;
+	font-size: 1.25vw;
+	font-family: 'TT Travels', sans-serif;
+}
+
+.admin-table__input--new {
+	padding: 0.21vw;
+}
+
+.admin-table__file-input {
+	width: 100%;
+	padding: 0.21vw;
+	font-size: 0.83vw;
+}
+
+.admin-table__image-selected {
+	margin-top: 0.26vw;
+	font-size: 0.73vw;
+	color: #666;
+}
+
+.admin-table__product-image {
+	max-width: 3.21vw;
+	max-height: 3.21vw;
+	object-fit: cover;
+	border-radius: 0.26vw;
+}
+
+.admin-table__load-image-btn {
+	padding: 0.26vw 0.52vw;
+	font-size: 0.83vw;
+	cursor: pointer;
+	background: none;
+	border: 1px solid #ccc;
+	border-radius: 0.21vw;
+}
+
+.admin-table__load-image-btn:hover {
+	background-color: rgba(200, 207, 194, 0.51);
+}
+
+.admin-table__no-image {
+	font-size: 1.25vw;
+	color: #999;
+}
+
+.admin-table__status-select {
+	width: 100%;
+	padding: 0.21vw;
+	border: 1px solid #ccc;
+	border-radius: 0.21vw;
+	font-size: 1.04vw;
+	font-family: 'TT Travels', sans-serif;
+	background: #fff;
+	cursor: pointer;
+	text-align: center;
 }

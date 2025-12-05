@@ -4,39 +4,44 @@ header {
 	justify-content: space-between;
 	background-color: var(--background-teal);
 	color: var(--text-cream);
-	gap: 19px;
-	height: 108px;
+	gap: 0.99vw;
+	height: 5.625vw;
 }
 
 .header__logo {
 	display: flex;
 	align-items: center;
-	gap: 19px;
-	width: 181.24px;
-	height: 63px;
-	margin-left: 99px;
+	gap: 0.99vw;
+	width: 9.44vw;
+	height: 3.28vw;
+	margin-left: 5.16vw;
+}
+
+.header__logo svg {
+	width: 3.0729vw;
+	height: 3.2813vw;
 }
 
 header div span {
-	font-size: 24px;
+	font-size: 1.25vw;
 }
 
 header div span em {
 	font-style: italic;
-	font-size: 16px;
+	font-size: 0.83vw;
 }
 
 header nav {
 	display: flex;
 	align-items: center;
-	gap: 32px;
-	margin-right: 89px;
+	gap: 1.67vw;
+	margin-right: 4.64vw;
 }
 
 nav a {
 	text-decoration: none;
 	color: inherit;
-	font-size: 20px;
+	font-size: 1.04vw;
 	font-style: normal;
 }
 
@@ -45,22 +50,22 @@ nav a {
 	align-items: center;
 	cursor: pointer;
 	flex-direction: column;
-	gap: 10px;
+	gap: 0.52vw;
 	color: inherit;
-	font-size: 18px;
+	font-size: 0.94vw;
 	position: relative;
 }
 
 .header__avatar {
-	width: 64px;
-	height: 64px;
+	width: 3.33vw;
+	height: 3.33vw;
 	border-radius: 50%;
 	object-fit: cover;
 }
 
 .header__nickname {
 	white-space: nowrap;
-	font-size: 15px;
+	font-size: 0.78vw;
 }
 
 .header__user-menu {
@@ -70,12 +75,12 @@ nav a {
 	transform: translateX(-50%);
 	background: #fcfbf8;
 	color: #103034;
-	border-radius: 10px;
-	padding: 8px 12px;
-	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+	border-radius: 0.52vw;
+	padding: 0.42vw 0.63vw;
+	box-shadow: 0 0.21vw 0.63vw rgba(0, 0, 0, 0.15);
 	display: none;
 	z-index: 5;
-	min-width: 120px;
+	min-width: 6.25vw;
 	text-align: center;
 }
 
@@ -83,7 +88,7 @@ nav a {
 	background: none;
 	border: none;
 	color: inherit;
-	font-size: 16px;
+	font-size: 0.83vw;
 	cursor: pointer;
 	padding: 0;
 }

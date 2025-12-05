@@ -1,9 +1,19 @@
+import { useState } from 'react'
 import './Product.css'
 import Header from '../../components/Header/Header.jsx'
 import Footer from '../../components/Footer/Footer.jsx'
+import Pagination from '../../components/Pagination/Pagination.jsx'
 import productImg from '../../assets/product.png'
 
-const product = () => {
+const Product = () => {
+	const [currentPage, setCurrentPage] = useState(0)
+	const totalPages = 12 // Примерное значение, замените на реальное из API
+
+	const handlePageChange = newPage => {
+		setCurrentPage(newPage)
+		// Здесь можно добавить загрузку данных для новой страницы
+	}
+
 	return (
 		<>
 			<Header />
@@ -86,35 +96,13 @@ const product = () => {
 							</span>
 						</div>
 					</div>
-					<div className='reviews-section__pagination pagination'>
-						<svg
-							width='25'
-							height='45'
-							viewBox='0 0 25 45'
-							fill='none'
-							xmlns='http://www.w3.org/2000/svg'
-						>
-							<path
-								d='M1.11919e-06 22.1737L24.9944 2.39807e-05L24.9944 44.3474L1.11919e-06 22.1737Z'
-								fill='#9CA8A9'
-								fill-opacity='0.39'
-							/>
-						</svg>
-						<span className='pagination__numbers'>1 2 3 ... 12</span>
-						<svg
-							width='25'
-							height='45'
-							viewBox='0 0 25 45'
-							fill='none'
-							xmlns='http://www.w3.org/2000/svg'
-						>
-							<path
-								d='M24.9944 22.1737L1.69851e-05 44.3474L1.89235e-05 -1.4444e-05L24.9944 22.1737Z'
-								fill='#9CA8A9'
-								fill-opacity='0.39'
-							/>
-						</svg>
-					</div>
+					{totalPages > 1 && (
+						<Pagination
+							currentPage={currentPage}
+							totalPages={totalPages}
+							onPageChange={handlePageChange}
+						/>
+					)}
 				</section>
 			</main>
 			<Footer />
@@ -122,4 +110,4 @@ const product = () => {
 	)
 }
 
-export default product
+export default Product

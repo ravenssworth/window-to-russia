@@ -5,9 +5,9 @@ main {
 }
 
 main h1 {
-	font-size: 60px;
+	font-size: 3.13vw;
 	font-weight: bold;
-	margin: 71px 88px 0 99px;
+	margin: 3.7vw 4.58vw 0 5.16vw;
 	color: var(--text-primary);
 }
 
@@ -22,15 +22,15 @@ main h1 em {
 }
 
 .home__section-first h2 {
-	font-size: 32px;
+	font-size: 1.67vw;
 	color: var(--text-muted);
-	margin: 0 88px 70px 99px;
+	margin: 0 4.58vw 3.65vw 5.16vw;
 	font-weight: normal;
 }
 
 .home__section-first img {
-	height: 682px;
-	width: 1085px;
+	height: 35.52vw;
+	width: 56.51vw;
 }
 
 .section-first__content {
@@ -42,22 +42,22 @@ main h1 em {
 .section-first__text {
 	display: flex;
 	flex-direction: column;
-	gap: 5px;
+	gap: 0.26vw;
 	position: absolute;
-	width: 868px;
-	height: 498px;
+	width: 45.21vw;
+	height: 25.94vw;
 	background-color: var(--text-primary);
-	top: 104px;
-	left: 964px;
+	top: 5.42vw;
+	left: 50.21vw;
 	color: var(--text-light);
 }
 
 .section-first__title {
-	font-size: 48px;
-	margin-top: 57px;
-	margin-left: 94px;
+	font-size: 2.5vw;
+	margin-top: 2.97vw;
+	margin-left: 4.9vw;
 	line-height: 108%;
-	height: 192px;
+	height: 10vw;
 }
 
 .section-first__title em {
@@ -67,8 +67,9 @@ main h1 em {
 
 .section-first__description {
 	font-weight: 500;
-	height: 197px;
-	margin-left: 94px;
+	font-size: 0.83vw;
+	height: 10.26vw;
+	margin-left: 4.9vw;
 	line-height: 200%;
 }
 
@@ -78,15 +79,15 @@ main h1 em {
 }
 
 .section-first__text hr {
-	width: 681px;
+	width: 35.47vw;
 }
 
 .home__section-second {
-	margin: 128px 83.17px 93.13px 96px;
+	margin: 6.67vw 4.33vw 4.85vw 5vw;
 }
 
 .home__section-second h2 {
-	font-size: 40px;
+	font-size: 2.08vw;
 	font-style: normal;
 	font-weight: 400;
 	text-align: center;
@@ -94,14 +95,14 @@ main h1 em {
 
 .section-second__blocks {
 	display: flex;
-	gap: 27.06px;
+	gap: 1.41vw;
 }
 
 .section-second__block {
-	width: 568.83px;
-	height: 266px;
+	width: 29.63vw;
+	height: 13.85vw;
 	background-color: rgba(234, 159, 116, 0.39);
-	border-radius: 14px;
+	border-radius: 0.73vw;
 }
 
 .section-second__block ol {
@@ -112,17 +113,18 @@ main h1 em {
 	list-style: disc inside none;
 	font-family: 'TT Travels', sans-serif;
 	line-height: 133%;
+	font-size: 0.83vw;
 }
 
 .block__title {
-	font-size: 32px;
-	margin: 45px 0 0 35px;
+	font-size: 1.67vw;
+	margin: 2.34vw 0 0 1.82vw;
 	display: block;
 }
 
 .section-second__block hr {
-	width: 504.88px;
-	margin: 17.6px 0 0 38px;
+	width: 26.3vw;
+	margin: 0.92vw 0 0 1.98vw;
 	border-color: rgba(0, 0, 0, 0.4);
 	font-weight: 400;
 }

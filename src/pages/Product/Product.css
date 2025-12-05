@@ -1,148 +1,148 @@
 .product__top {
 	background-image: url('../../assets/background.png');
-	height: 310px;
+	height: 16.15vw;
 	background-size: cover;
 	background-position: center bottom 20%;
 }
 
 .product__top h1 {
 	text-align: center;
-	margin: 71px 0 0 0;
-	height: 93px;
+	margin: 3.7vw 0 0 0;
+	height: 4.84vw;
 	font-weight: bold;
-	font-size: 60px;
+	font-size: 3.13vw;
 	color: #be3d09;
 }
 
 .product__top h2 {
 	text-align: center;
-	height: 48px;
+	height: 2.5vw;
 	font-weight: normal;
-	font-size: 32px;
+	font-size: 1.67vw;
 	margin: 0;
 }
 
 .product__content {
-	padding: 71px 125px 0 165px;
+	padding: 3.7vw 6.51vw 0 8.59vw;
 }
 
 .product__link {
 	display: block;
 	color: var(--background-teal);
 	font-weight: normal;
-	font-size: 32px;
-	margin: 0 0 73px 25px;
+	font-size: 1.67vw;
+	margin: 0 0 3.8vw 1.3vw;
 }
 
 .product__item {
 	display: flex;
-	gap: 64px;
+	gap: 3.33vw;
 	flex-direction: row;
 }
 
 .product__img {
-	height: 777px;
-	width: 691px;
+	height: 40.47vw;
+	width: 36.04vw;
 	background-color: rgba(0, 78, 89, 0.03);
-	border-radius: 20px;
+	border-radius: 1.04vw;
 }
 
 .product img {
-	height: 559px;
-	width: 580px;
-	margin: 52px 66px 0 66px;
+	height: 29.14vw;
+	width: 30.21vw;
+	margin: 2.71vw 3.44vw 0 3.44vw;
 }
 
 .product__name {
 	display: block;
 	font-weight: normal;
-	font-size: 36px;
-	margin: 52.3px 0 0 162.59px;
+	font-size: 1.88vw;
+	margin: 2.73vw 0 0 8.47vw;
 	color: rgba(6, 55, 62, 0.8);
 }
 
 .product__info {
-	height: 776px;
-	width: 868px;
+	height: 40.42vw;
+	width: 45.21vw;
 	background-color: rgba(0, 78, 89, 0.03);
-	border-radius: 20px;
+	border-radius: 1.04vw;
 }
 
 .info__name {
 	display: block;
 	text-align: center;
-	height: 59px;
-	margin: 47px 0 103px 0;
+	height: 3.07vw;
+	margin: 2.45vw 0 5.36vw 0;
 	font-weight: 500;
-	font-size: 48px;
+	font-size: 2.5vw;
 	color: var(--background-teal);
 }
 
 .info__description {
-	width: 611px;
-	height: 256px;
-	margin: 0 auto 36px auto;
+	width: 31.85vw;
+	height: 13.33vw;
+	margin: 0 auto 1.88vw auto;
 }
 
 .info__stroke {
 	display: flex;
-	gap: 80px;
-	font-size: 32px;
+	gap: 4.17vw;
+	font-size: 1.67vw;
 	font-weight: 500;
 	color: var(--background-teal);
-	height: 64px;
-	border-bottom: 2px solid rgba(66, 91, 96, 0.3);
+	height: 3.33vw;
+	border-bottom: 0.1vw solid rgba(66, 91, 96, 0.3);
 }
 
 .info__value {
 	display: flex;
 	align-items: center;
 	font-weight: normal;
-	font-size: 32px;
+	font-size: 1.67vw;
 }
 
 .info__title {
 	display: flex;
 	align-items: center;
-	margin: 0 0 0 27px;
-	width: 176px;
+	margin: 0 0 0 1.41vw;
+	width: 9.17vw;
 }
 
 .product__rating {
 	display: flex;
 	align-items: center;
-	gap: 16px;
-	margin: 0 0 36.4px 134px;
+	gap: 0.83vw;
+	margin: 0 0 1.9vw 6.98vw;
 }
 
 .product__rating-value {
-	font-size: 20px;
+	font-size: 1.04vw;
 }
 
 .product__btn {
 	display: block;
 	margin: auto;
-	width: 667px;
-	height: 140.42px;
+	width: 34.74vw;
+	height: 7.31vw;
 	background-color: var(--text-accent);
-	border-radius: 20px;
+	border-radius: 1.04vw;
 	border: none;
 	color: rgba(255, 255, 255, 0.77);
 	font-weight: 500;
-	font-size: 36px;
+	font-size: 1.88vw;
 }
 
 .product__reviews-section {
-	margin: 55px 99px 56px 99px;
+	margin: 2.86vw 5.16vw 2.92vw 5.16vw;
 	background-color: rgba(0, 78, 89, 0.03);
-	border-radius: 20px;
-	padding: 59px 99px 56px 99px;
+	border-radius: 1.04vw;
+	padding: 3.07vw 5.16vw 2.92vw 5.16vw;
 }
 
 .reviews-section__title {
 	display: block;
 	text-align: center;
-	margin: 0 0 75px 0;
+	margin: 0 0 3.91vw 0;
 	font-weight: 500;
 	color: #06373e;
 }
@@ -150,41 +150,41 @@
 .reviews-section__reviews {
 	display: flex;
 	flex-direction: column;
-	gap: 32px;
+	gap: 1.67vw;
 }
 
 .review {
 	display: flex;
 	flex-direction: column;
-	gap: 19px;
-	padding: 30px 44px 31px 46px;
+	gap: 0.99vw;
+	padding: 1.56vw 2.29vw 1.61vw 2.4vw;
 	background-color: #fffcf8;
 	border: 1px solid rgba(66, 91, 96, 0.52);
-	border-radius: 15px;
+	border-radius: 0.78vw;
 }
 
 .review__name {
 	font-family: 'TT Travels', sans-serif;
 	font-weight: 500;
-	font-size: 24px;
+	font-size: 1.25vw;
 }
 
 .review__text {
 	font-family: 'TT Travels', sans-serif;
 	font-weight: 400;
-	font-size: 24px;
+	font-size: 1.25vw;
 }
 
 .reviews-section__pagination {
 	display: flex;
 	flex-direction: row;
-	gap: 79.67px;
+	gap: 4.15vw;
 	justify-content: center;
 	align-items: center;
-	margin: 49px 0 0 0;
+	margin: 2.55vw 0 0 0;
 }
 
 .pagination__numbers {
 	color: rgba(6, 55, 62, 0.8);
-	font-size: 36px;
+	font-size: 1.88vw;
 }

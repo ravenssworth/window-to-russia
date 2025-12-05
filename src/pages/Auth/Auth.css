@@ -2,8 +2,7 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	padding: 154px 353px 131px;
-
+	padding: 8.02vw 18.39vw 6.82vw;
 	background-image: linear-gradient(
 			rgba(30, 57, 60, 0.39),
 			rgba(30, 57, 60, 0.39)
@@ -14,67 +13,66 @@
 }
 
 .auth__container {
-	width: 1213px;
+	width: 63.18vw;
 	background-color: #fcfbf8;
-	border-radius: 20px;
+	border-radius: 1.04vw;
 	transition: height 0.3s ease;
 }
 
 .auth__container--login {
-	height: 650px;
+	height: 33.85vw;
 }
 
 .auth__container--register {
-	height: 1050px;
+	height: 54.69vw;
 }
 
 .auth__title {
 	display: block;
-	font-size: 60px;
+	font-size: 3.13vw;
 	font-weight: 500;
-	margin: 62px 240px 0 240px;
-	height: 93px;
+	margin: 3.23vw 12.5vw 0 12.5vw;
+	height: 4.84vw;
 }
 
 .auth__text {
 	display: block;
-	font-size: 24px;
-	height: 48px;
-	margin: 0 240px 0 240px;
+	font-size: 1.25vw;
+	height: 2.5vw;
+	margin: 0 12.5vw 0 12.5vw;
 }
 
 .auth__tabs {
 	position: relative;
-	margin: 0 0 0 305px;
-	width: 598px; /* 216px + 382px */
+	margin: 0 0 0 15.89vw;
+	width: 31.15vw;
 }
 
 .auth__tab {
 	background: none;
 	border: none;
-	font-size: 32px;
+	font-size: 1.67vw;
 	cursor: pointer;
 }
 
 .auth__tab--login {
-	width: 216px;
-	margin-bottom: 13px;
+	width: 11.25vw;
+	margin-bottom: 0.68vw;
 }
 
 .auth__tab--register {
-	width: 382px;
-	margin-bottom: 13px;
+	width: 19.9vw;
+	margin-bottom: 0.68vw;
 }
 
 .auth__tab-line {
 	position: absolute;
 	width: 100%;
-	height: 3.5px;
+	height: 0.18vw;
 	background-color: #a5a5a5;
-	margin: 0 0 20px 0;
+	margin: 0 0 1.04vw 0;
 }
 
-/* Активная часть полосы */
 .auth__tab-indicator {
 	position: absolute;
 	height: 100%;
@@ -82,48 +80,49 @@
 	transition: all 0.3s ease;
 }
 
-/* Позиционирование для левой кнопки (ВХОД) */
 .auth__tab-indicator--left {
-	width: 216px;
+	width: 11.25vw;
 }
 
-/* Позиционирование для правой кнопки (РЕГИСТРАЦИЯ) */
 .auth__tab-indicator--right {
-	left: 216px;
-	width: 382px;
+	left: 11.25vw;
+	width: 19.9vw;
 }
 
 .auth__form {
-	width: 601px;
-	margin: 20px 307px 0 305px;
+	width: 31.3vw;
+	margin: 1.04vw 16vw 0 15.89vw;
 }
 
 .auth__form label {
 	display: block;
-	height: 40px;
-	margin: 0 0 0 16px;
+	height: 2.08vw;
+	margin: 0 0 0 0.83vw;
+	font-size: 1.0416vw;
 }
 
 .auth__form-group {
-	margin: 0 0 13px 0;
+	margin: 0 0 0.68vw 0;
 }
 
 .auth__form input {
-	border-radius: 15px;
+	border-radius: 0.78vw;
 	border: 1px solid #425b60;
 	width: 100%;
-	height: 44.79px;
+	height: 2.33vw;
 	background-color: #fcfbf8;
+	font-size: 1.0416vw;
+	padding: 0 0 0 10px;
 }
 
 .auth__submit {
 	display: block;
-	margin: 34px auto 0 auto;
-	width: 374px;
-	height: 59px;
+	margin: 1.77vw auto 0 auto;
+	width: 19.48vw;
+	height: 3.07vw;
 	background-color: #dc764a;
-	border-radius: 15px;
-	font-size: 24px;
+	border-radius: 0.78vw;
+	font-size: 1.25vw;
 	cursor: pointer;
 	border: none;
 	color: #fdf5ec;

@@ -29,18 +29,20 @@ const API_BASE_URL = getApiBaseUrl()
 
 const apiClient = axios.create({
 	baseURL: API_BASE_URL,
-	headers: {
-		'Content-Type': 'application/json',
-	},
 	timeout: 60000,
 })
 
-// Интерцептор запросов - добавляет токен авторизации
+// Интерцептор запросов - добавляет токен авторизации и Content-Type
 apiClient.interceptors.request.use(
 	config => {
 		const token = storage.getToken()
 		if (token && !auth.isTokenExpired(token)) {
 			config.headers['Authorization'] = `Bearer ${token}`
+		}
+		// Для FormData не устанавливаем Content-Type - axios установит автоматически с boundary
+		// Для остальных запросов устанавливаем application/json
+		if (!(config.data instanceof FormData)) {
+			config.headers['Content-Type'] = 'application/json'
 		}
 		return config
 	},

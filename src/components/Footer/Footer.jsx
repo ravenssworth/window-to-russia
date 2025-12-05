@@ -32,12 +32,21 @@ function Footer() {
 							<span>https://www.www.www</span>
 						</div>
 					</div>
-					<div>
+					<div className='footer__address'>
 						<span className='footer__title'>АДРЕС</span>
+						<div className='footer__map'>
+							<iframe
+								src='https://yandex.ru/map-widget/v1/?um=constructor%3A...&amp;source=constructor'
+								width='100%'
+								height='100%'
+								frameBorder='0'
+								title='Карта'
+							></iframe>
+						</div>
 					</div>
 				</div>
 				<hr />
-				<span className='footer__copyright'>2025, ООО “Окно в россию”</span>
+				<span className='footer__copyright'>2025, ООО “ОКНО В РОССИЮ”</span>
 			</footer>
 		</div>
 	)

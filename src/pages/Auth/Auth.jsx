@@ -211,8 +211,8 @@ const Auth = () => {
 						<div
 							style={{
 								color: 'red',
-								margin: '25px 0 15px 321px',
-								fontSize: '16px',
+								margin: ' 1.3021vw 0 0.7813vw 16.7188vw',
+								fontSize: '1.0416vw',
 							}}
 						>
 							{error}
@@ -223,8 +223,8 @@ const Auth = () => {
 						<div
 							style={{
 								color: 'green',
-								margin: '25px 0 15px 305px',
-								fontSize: '16px',
+								margin: ' 1.3021vw 0 0.7813vw 16.7188vw',
+								fontSize: '1.0416vw',
 							}}
 						>
 							{success}

@@ -1,0 +1,54 @@
+.reviews-section__pagination {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	gap: 4.15vw;
+}
+
+.pagination__arrow {
+	background: none;
+	border: none;
+	cursor: pointer;
+	padding: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.pagination__arrow:disabled {
+	cursor: not-allowed;
+	opacity: 0.5;
+}
+
+.pagination__numbers {
+	color: rgba(6, 55, 62, 0.8);
+	font-size: 1.88vw;
+	display: flex;
+	gap: 0.52vw;
+	align-items: center;
+}
+
+.pagination__number {
+	background: none;
+	border: none;
+	color: rgba(6, 55, 62, 0.8);
+	font-size: 1.88vw;
+	cursor: pointer;
+	padding: 0;
+	transition: color 0.2s;
+}
+
+.pagination__number:hover {
+	color: var(--text-accent);
+}
+
+.pagination__number--active {
+	color: var(--text-accent);
+	font-weight: 600;
+}
+
+.pagination__ellipsis {
+	color: rgba(6, 55, 62, 0.8);
+	font-size: 1.88vw;
+}

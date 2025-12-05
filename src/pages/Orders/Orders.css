@@ -1,41 +1,40 @@
 .orders__title {
 	text-align: center;
-	margin: 71px 0 0 0;
-	height: 93px;
+	margin: 3.7vw 0 0 0;
+	height: 4.84vw;
 	font-weight: bold;
-	font-size: 60px;
+	font-size: 3.13vw;
 	color: #be3d09;
 }
 
 .orders__description {
 	text-align: center;
-	height: 48px;
+	height: 2.5vw;
 	font-weight: normal;
-	font-size: 32px;
+	font-size: 1.67vw;
 	margin: 0;
 	text-transform: uppercase;
 }
 
 .orders__content {
-	padding: 102px 131px 78px 125px;
+	padding: 5.31vw 6.82vw 4.06vw 6.51vw;
 }
 
 .orders-order__id-date-status-total {
 	display: flex;
-	gap: 39px;
+	gap: 2.03vw;
 	align-items: center;
 }
 
 .orders-order__id-date {
 	display: flex;
 	flex-direction: column;
-
-	gap: 10px;
-	width: 173px;
+	gap: 0.52vw;
+	width: 9.01vw;
 }
 
 .orders-order__id-date span {
-	font-size: 24px;
+	font-size: 1.25vw;
 	font-weight: 500;
 	color: var(--text-muted);
 }
@@ -44,12 +43,12 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	width: 201px;
-	height: 50.64px;
+	width: 10.47vw;
+	height: 2.64vw;
 	background-color: rgba(200, 207, 194, 0.51);
 	border: 1px solid rgba(66, 91, 96, 0.52);
-	border-radius: 15px;
-	font-size: 20px;
+	border-radius: 0.78vw;
+	font-size: 1.04vw;
 	color: var(--text-muted);
 }
 
@@ -57,52 +56,49 @@
 	font-family: 'TT Travels', sans-serif;
 	font-weight: 400;
 	margin-left: auto;
-	font-size: 24px;
+	font-size: 1.25vw;
 }
 
 .orders-order__total em {
 	font-family: 'TT Travels', sans-serif;
 	font-weight: 400;
-	font-size: 24px;
+	font-size: 1.25vw;
 	color: #be3d09;
 	font-style: normal;
-	margin: 0 0 0 16px;
+	margin: 0 0 0 0.83vw;
 }
 
 .orders__orders-order {
-	padding: 32px 107px 63px 119px;
-	width: 1665px;
-	height: 403px;
+	padding: 1.67vw 5.57vw 3.28vw 6.2vw;
+	width: 86.72vw;
+	height: 20.99vw;
 	background-color: rgba(0, 78, 89, 0.03);
-	border-radius: 20px;
+	border-radius: 1.04vw;
 	box-sizing: border-box;
 }
 
-.orders-order__order-item {
-}
-
 .order-item img {
-	width: 195px;
-	height: 203px;
+	width: 10.16vw;
+	height: 10.57vw;
 }
 
 .order-item__img-name-description-button-count {
 	display: flex;
-	gap: 71px;
-	margin: 37px 0 0 0;
+	gap: 3.7vw;
+	margin: 1.93vw 0 0 0;
 }
 
 .order-item__name {
 	display: block;
-	font-size: 32px;
+	font-size: 1.67vw;
 	font-weight: 500;
 	color: var(--text-muted);
-	margin: 0 0 25px 0;
+	margin: 0 0 1.3vw 0;
 }
 
 .order-item__description-button {
 	display: flex;
-	gap: 42.04px;
+	gap: 2.19vw;
 }
 
 .order-item__description {
@@ -111,26 +107,26 @@
 }
 
 .order-item__description span {
-	font-size: 15px;
+	font-size: 0.78vw;
 	font-weight: 400;
 	color: var(--background-teal);
 }
 
 .order-item__button {
-	font-size: 20px;
+	font-size: 1.04vw;
 	font-weight: 400;
 	color: var(--background-teal);
 	background: none;
 	border: 1px solid rgba(66, 91, 96, 0.52);
-	border-radius: 15px;
-	width: 213px;
-	height: 60px;
+	border-radius: 0.78vw;
+	width: 11.09vw;
+	height: 3.13vw;
 }
 
 .order-item__count {
 	display: block;
-	font-size: 15px;
+	font-size: 0.78vw;
 	font-weight: 400;
 	color: var(--background-teal);
-	margin: 15px 0 0 0;
+	margin: 0.78vw 0 0 0;
 }
