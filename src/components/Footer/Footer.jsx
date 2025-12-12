@@ -20,7 +20,7 @@ function Footer() {
 						<span className='footer__title'>ССЫЛКИ</span>
 						<nav>
 							<a href='/'>Главная</a>
-							<a href='/builder'>Конструктор</a>
+							<a href='/products'>Товары</a>
 							<a href='/orders'>Заказы</a>
 						</nav>
 					</div>
@@ -29,7 +29,7 @@ function Footer() {
 						<div>
 							<span>+7 111 111 11 11</span>
 							<span>info@gmail.com</span>
-							<span>https://www.www.www</span>
+							<span>https://окно-в.рф/</span>
 						</div>
 					</div>
 					<div className='footer__address'>

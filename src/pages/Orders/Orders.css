@@ -18,6 +18,9 @@
 
 .orders__content {
 	padding: 5.31vw 6.82vw 4.06vw 6.51vw;
+	display: flex;
+	flex-direction: column;
+	gap: 1.875vw;
 }
 
 .orders-order__id-date-status-total {
@@ -71,10 +74,16 @@
 .orders__orders-order {
 	padding: 1.67vw 5.57vw 3.28vw 6.2vw;
 	width: 86.72vw;
-	height: 20.99vw;
+
 	background-color: rgba(0, 78, 89, 0.03);
 	border-radius: 1.04vw;
 	box-sizing: border-box;
+}
+
+.orders-order__order-items {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 3.927 6.927vw;
 }
 
 .order-item img {
@@ -88,6 +97,10 @@
 	margin: 1.93vw 0 0 0;
 }
 
+.order-item__name-description-button-count {
+	width: 19.5vw;
+}
+
 .order-item__name {
 	display: block;
 	font-size: 1.67vw;
@@ -99,6 +112,8 @@
 .order-item__description-button {
 	display: flex;
 	gap: 2.19vw;
+	width: 100%;
+	justify-content: space-between;
 }
 
 .order-item__description {
@@ -121,6 +136,7 @@
 	border-radius: 0.78vw;
 	width: 11.09vw;
 	height: 3.13vw;
+	cursor: pointer;
 }
 
 .order-item__count {
@@ -129,4 +145,198 @@
 	font-weight: 400;
 	color: var(--background-teal);
 	margin: 0.78vw 0 0 0;
+}
+
+.orders__review-modal-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, 0.5);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 1000;
+}
+
+.orders__review-modal {
+	background-color: #fff;
+	border-radius: 1.04vw;
+	width: 90%;
+	max-width: 40vw;
+	max-height: 90vh;
+	overflow-y: auto;
+	box-shadow: 0 0.52vw 1.56vw rgba(0, 0, 0, 0.2);
+}
+
+.orders__review-modal-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1.56vw 2.08vw;
+	border-bottom: 1px solid rgba(66, 91, 96, 0.2);
+}
+
+.orders__review-modal-header h3 {
+	margin: 0;
+	font-size: 1.67vw;
+	font-weight: 500;
+	color: var(--text-muted);
+}
+
+.orders__review-modal-close {
+	background: none;
+	border: none;
+	font-size: 2.08vw;
+	color: var(--text-muted);
+	cursor: pointer;
+	padding: 0;
+	width: 2.08vw;
+	height: 2.08vw;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	line-height: 1;
+}
+
+.orders__review-modal-close:hover {
+	color: #be3d09;
+}
+
+.orders__review-modal-content {
+	padding: 2.08vw;
+}
+
+.orders__review-product-info {
+	margin-bottom: 1.56vw;
+}
+
+.orders__review-product-name {
+	font-size: 1.25vw;
+	font-weight: 500;
+	color: var(--text-muted);
+}
+
+.orders__review-rating {
+	margin-bottom: 1.56vw;
+}
+
+.orders__review-rating label {
+	display: block;
+	font-size: 1.04vw;
+	font-weight: 400;
+	color: var(--text-muted);
+	margin-bottom: 0.52vw;
+}
+
+.orders__review-stars {
+	display: flex;
+	gap: 0.52vw;
+}
+
+.orders__review-star {
+	background: none;
+	border: none;
+	font-size: 2.08vw;
+	color: #e0e0e0;
+	cursor: pointer;
+	padding: 0;
+	line-height: 1;
+	transition: color 0.2s;
+}
+
+.orders__review-star:hover {
+	color: #f8b96c;
+}
+
+.orders__review-star--active {
+	color: #f8b96c;
+}
+
+.orders__review-text {
+	margin-bottom: 1.56vw;
+}
+
+.orders__review-text label {
+	display: block;
+	font-size: 1.04vw;
+	font-weight: 400;
+	color: var(--text-muted);
+	margin-bottom: 0.52vw;
+}
+
+.orders__review-text textarea {
+	width: 100%;
+	padding: 0.78vw;
+	border: 1px solid rgba(66, 91, 96, 0.52);
+	border-radius: 0.52vw;
+	font-size: 1.04vw;
+	font-family: inherit;
+	resize: vertical;
+	box-sizing: border-box;
+}
+
+.orders__review-text textarea:focus {
+	outline: none;
+	border-color: var(--background-teal);
+}
+
+.orders__review-error {
+	color: #be3d09;
+	font-size: 0.94vw;
+	margin-bottom: 1.04vw;
+	padding: 0.52vw;
+	background-color: rgba(190, 61, 9, 0.1);
+	border-radius: 0.52vw;
+}
+
+.orders__review-actions {
+	display: flex;
+	gap: 1.04vw;
+	justify-content: flex-end;
+}
+
+.orders__review-submit,
+.orders__review-cancel {
+	padding: 0.78vw 1.56vw;
+	font-size: 1.04vw;
+	font-weight: 400;
+	border-radius: 0.52vw;
+	cursor: pointer;
+	border: 1px solid rgba(66, 91, 96, 0.52);
+	transition: all 0.2s;
+}
+
+.orders__review-submit {
+	background-color: var(--background-teal);
+	color: #fff;
+	border-color: var(--background-teal);
+}
+
+.orders__review-submit:hover:not(:disabled) {
+	background-color: rgba(0, 78, 89, 0.9);
+}
+
+.orders__review-submit:disabled {
+	opacity: 0.6;
+	cursor: not-allowed;
+}
+
+.orders__review-cancel {
+	background-color: #fff;
+	color: var(--text-muted);
+}
+
+.orders__review-cancel:hover:not(:disabled) {
+	background-color: rgba(0, 78, 89, 0.05);
+}
+
+.orders__review-cancel:disabled {
+	opacity: 0.6;
+	cursor: not-allowed;
+}
+
+.orders-order__status--delivered {
+	background-color: rgba(131, 221, 58, 0.51);
 }

@@ -17,12 +17,13 @@ const Admin = () => {
 		price: '',
 		height: '',
 		width: '',
+		color: '',
 		stockQuantity: '',
-		image: null, // File объект вместо base64 строки
+		image: null,
 	})
 	const [editingProductId, setEditingProductId] = useState(null)
 	const [editingProduct, setEditingProduct] = useState(null)
-	const [productImages, setProductImages] = useState({}) // Кэш изображений: { productId: imageUrl }
+	const [productImages, setProductImages] = useState({})
 	const [orders, setOrders] = useState([])
 	const [ordersLoading, setOrdersLoading] = useState(false)
 	const [ordersError, setOrdersError] = useState('')
@@ -42,11 +43,12 @@ const Admin = () => {
 		setLoading(true)
 		setError('')
 		try {
-			const response = await apiClient.get('/products')
+			const response = await apiClient.get('/products', {
+				params: { sort: 'name' },
+			})
 			const productsList = response.data?.content || []
 			setProducts(productsList)
 
-			// Загружаем изображения для всех товаров
 			productsList.forEach(product => {
 				if (!productImages[product.id]) {
 					fetchProductImage(null, product.id)
@@ -68,6 +70,7 @@ const Admin = () => {
 			price: '',
 			height: '',
 			width: '',
+			color: '',
 			stockQuantity: '',
 			image: '',
 		})
@@ -81,7 +84,6 @@ const Admin = () => {
 	}
 
 	const handleSaveNewProduct = async () => {
-		// Валидация
 		if (!newProduct.name || !newProduct.price || !newProduct.stockQuantity) {
 			setError('Заполните обязательные поля: название, цена, количество')
 			return
@@ -97,26 +99,25 @@ const Admin = () => {
 				price: Number.parseFloat(newProduct.price) || 0.01,
 				height: Number.parseFloat(newProduct.height) || 0,
 				width: Number.parseFloat(newProduct.width) || 0,
+				color: newProduct.color || '',
 				stockQuantity: Number.parseInt(newProduct.stockQuantity, 10) || 0,
 			}
 
 			const response = await apiClient.post('/products', productData)
 			const createdProductId = response.data?.id
 
-			// Если указано изображение, загружаем его через FormData
 			if (newProduct.image && createdProductId) {
 				try {
 					const formData = new FormData()
 					formData.append('image', newProduct.image)
 
-					// axios автоматически установит правильный Content-Type с boundary для FormData
 					await apiClient.post(`/images/${createdProductId}`, formData)
+					fetchProductImage(null, createdProductId)
 				} catch (error_) {
 					console.error('Ошибка при загрузке изображения:', error_)
 					setError(
 						`Товар создан, но не удалось загрузить изображение: ${error_.message}`
 					)
-					// Не прерываем процесс, но показываем ошибку пользователю
 				}
 			}
 
@@ -130,7 +131,6 @@ const Admin = () => {
 				stockQuantity: '',
 				image: null,
 			})
-			// Обновляем список товаров
 			await fetchProducts()
 		} catch (err) {
 			setError(err.message || 'Ошибка при добавлении товара')
@@ -147,6 +147,7 @@ const Admin = () => {
 			price: '',
 			height: '',
 			width: '',
+			color: '',
 			stockQuantity: '',
 			image: null,
 		})
@@ -179,11 +180,11 @@ const Admin = () => {
 			price: product.price?.toString() || '',
 			height: product.height?.toString() || '',
 			width: product.width?.toString() || '',
+			color: product.color || '',
 			stockQuantity: product.stockQuantity?.toString() || '',
-			image: null, // File объект вместо base64 строки
+			image: null,
 		})
 		setError('')
-		// Загружаем изображение товара
 		fetchProductImage(null, product.id)
 	}
 
@@ -197,7 +198,6 @@ const Admin = () => {
 	const handleSaveEdit = async () => {
 		if (!editingProductId || !editingProduct) return
 
-		// Валидация
 		if (
 			!editingProduct.name ||
 			!editingProduct.price ||
@@ -217,25 +217,24 @@ const Admin = () => {
 				price: Number.parseFloat(editingProduct.price) || 0.01,
 				height: Number.parseFloat(editingProduct.height) || 0,
 				width: Number.parseFloat(editingProduct.width) || 0,
+				color: editingProduct.color || '',
 				stockQuantity: Number.parseInt(editingProduct.stockQuantity, 10) || 0,
 			}
 
 			await apiClient.put(`/products/${editingProductId}`, productData)
 
-			// Если указано новое изображение, загружаем его через FormData
 			if (editingProduct.image) {
 				try {
 					const formData = new FormData()
 					formData.append('image', editingProduct.image)
 
-					// axios автоматически установит правильный Content-Type с boundary для FormData
 					await apiClient.post(`/images/${editingProductId}`, formData)
+					fetchProductImage(null, editingProductId)
 				} catch (error_) {
 					console.error('Ошибка при загрузке изображения:', error_)
 					setError(
 						`Товар обновлен, но не удалось загрузить изображение: ${error_.message}`
 					)
-					// Не прерываем процесс, но показываем ошибку пользователю
 				}
 			}
 
@@ -280,7 +279,6 @@ const Admin = () => {
 		setOrdersError('')
 
 		try {
-			// PUT запрос для изменения статуса заказа
 			await apiClient.put(`/orders/${orderId}`, { status: newStatus })
 			await fetchOrders(ordersPage)
 		} catch (err) {
@@ -294,18 +292,26 @@ const Admin = () => {
 		return ['PENDING', 'PROCESSING', 'SHIPPED', 'DELIVERED', 'CANCELLED']
 	}
 
-	// Функция для получения изображения товара
+	const getStatusTranslation = status => {
+		const translations = {
+			PENDING: 'Ожидает',
+			PROCESSING: 'Обрабатывается',
+			SHIPPED: 'Отправлен',
+			DELIVERED: 'Доставлен',
+			CANCELLED: 'Отменен',
+		}
+		return translations[status] || status
+	}
+
 	const fetchProductImage = async (imageId, productId) => {
-		if (!productId || productImages[productId]) return
+		if (!productId) return
 
 		try {
 			const response = await apiClient.get(
 				`/images/allByProduct?productId=${productId}`
 			)
 			const imageData = response.data
-			// Ответ содержит объект с полями id и image (base64 строка)
 			if (imageData?.image) {
-				// Преобразуем base64 строку в data URL для отображения
 				const imageUrl = `data:image/jpeg;base64,${imageData.image}`
 				setProductImages(prev => ({
 					...prev,
@@ -317,26 +323,22 @@ const Admin = () => {
 		}
 	}
 
-	// Функция для сохранения файла (без конвертации в base64)
 	const handleImageFileChange = (file, isNewProduct) => {
 		if (!file) return
 
-		// Проверка размера файла (максимум 10MB)
-		const maxSize = 10 * 1024 * 1024 // 10MB
+		const maxSize = 10 * 1024 * 1024
 		if (file.size > maxSize) {
 			setError('Размер файла не должен превышать 10MB')
 			return
 		}
 
-		// Проверка типа файла
 		if (!file.type.startsWith('image/')) {
 			setError('Выберите файл изображения')
 			return
 		}
 
-		setError('') // Очищаем предыдущие ошибки
+		setError('')
 
-		// Сохраняем File объект напрямую
 		if (isNewProduct) {
 			setNewProduct(prev => ({
 				...prev,
@@ -404,6 +406,7 @@ const Admin = () => {
 											<th>Цена</th>
 											<th>Ширина</th>
 											<th>Высота</th>
+											<th>Цвет</th>
 											<th>Количество</th>
 											<th>Изображение</th>
 											<th>Действия</th>
@@ -493,6 +496,20 @@ const Admin = () => {
 													</td>
 													<td>
 														<input
+															type='text'
+															className='admin-table__input'
+															value={editingProduct.color}
+															onChange={e =>
+																handleEditingProductChange(
+																	'color',
+																	e.target.value
+																)
+															}
+															placeholder='Цвет'
+														/>
+													</td>
+													<td>
+														<input
 															type='number'
 															min='0'
 															className='admin-table__input'
@@ -551,6 +568,7 @@ const Admin = () => {
 													<td>{product.price?.toLocaleString('ru-RU')} ₽</td>
 													<td>{product.width || '-'}</td>
 													<td>{product.height || '-'}</td>
+													<td>{product.color || '-'}</td>
 													<td>{product.stockQuantity}</td>
 													<td>
 														{(() => {
@@ -563,16 +581,10 @@ const Admin = () => {
 																	/>
 																)
 															}
-															// Пытаемся загрузить изображение при первом рендере
 															return (
-																<button
-																	className='admin-table__load-image-btn'
-																	onClick={() =>
-																		fetchProductImage(null, product.id)
-																	}
-																>
-																	Загрузить
-																</button>
+																<span className='admin-table__no-image'>
+																	Изображение не загружено
+																</span>
 															)
 														})()}
 													</td>
@@ -667,6 +679,17 @@ const Admin = () => {
 															handleNewProductChange('height', e.target.value)
 														}
 														placeholder='Высота'
+													/>
+												</td>
+												<td>
+													<input
+														type='text'
+														className='admin-table__input admin-table__input--new'
+														value={newProduct.color}
+														onChange={e =>
+															handleNewProductChange('color', e.target.value)
+														}
+														placeholder='Цвет'
 													/>
 												</td>
 												<td>
@@ -770,7 +793,7 @@ const Admin = () => {
 													>
 														{getStatusOptions().map(status => (
 															<option key={status} value={status}>
-																{status}
+																{getStatusTranslation(status)}
 															</option>
 														))}
 													</select>

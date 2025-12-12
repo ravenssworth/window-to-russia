@@ -103,10 +103,14 @@ main h1 em {
 	height: 13.85vw;
 	background-color: rgba(234, 159, 116, 0.39);
 	border-radius: 0.73vw;
+	padding: 2.34vw 1.614583vw 0 1.614583vw;
+	box-sizing: border-box;
 }
 
 .section-second__block ol {
 	list-style-type: disc;
+	margin: 1.63541vw 0 0 0;
+	padding: 0;
 }
 
 .section-second__block ol li {
@@ -118,13 +122,13 @@ main h1 em {
 
 .block__title {
 	font-size: 1.67vw;
-	margin: 2.34vw 0 0 1.82vw;
+	margin: 0;
 	display: block;
 }
 
 .section-second__block hr {
-	width: 26.3vw;
-	margin: 0.92vw 0 0 1.98vw;
+	width: 100%;
+	margin: 0.92vw 0 0 0;
 	border-color: rgba(0, 0, 0, 0.4);
 	font-weight: 400;
 }

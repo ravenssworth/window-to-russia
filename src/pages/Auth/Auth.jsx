@@ -105,7 +105,6 @@ const Auth = () => {
 				password: formData.password,
 			})
 
-			// Проверяем, что ответ не содержит ошибку
 			const responseData = response.data
 			if (
 				typeof responseData === 'string' &&
@@ -121,15 +120,12 @@ const Auth = () => {
 				throw new Error('Неверное имя пользователя или пароль')
 			}
 
-			// Сохраняем токен
 			storage.setToken(token)
 
-			// Распознаём данные пользователя из токена
 			const payload = auth.decodeToken(token) || {}
 			const roles = payload.roles || payload.authorities || payload.role
 			const hasAdminRole = isAdminFromRoles(roles)
 
-			// Дополнительная проверка — пробуем получить всех пользователей (доступно только админу)
 			const adminByRequest = hasAdminRole ? false : await checkAdminByRequest()
 
 			const userData = {
@@ -142,13 +138,11 @@ const Auth = () => {
 			storage.setUser(userData)
 			setSuccess('Вход выполнен успешно!')
 
-			// Очищаем пароль в форме
 			setFormData(prev => ({
 				...prev,
 				password: '',
 			}))
 
-			// Перенаправляем на главную, чтобы хедер обновился
 			setTimeout(() => {
 				globalThis.location.href = '/'
 			}, 800)

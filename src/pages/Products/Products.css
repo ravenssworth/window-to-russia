@@ -85,7 +85,9 @@
 }
 
 .products-item__btn {
-	display: block;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	margin: auto;
 	width: 14.48vw;
 	height: 2.32vw;
@@ -96,9 +98,5 @@
 	font-weight: 400;
 	font-size: 1.04vw;
 	cursor: pointer;
-}
-
-.products-item__btn a {
-	color: #ffffff;
 	text-decoration: none;
 }

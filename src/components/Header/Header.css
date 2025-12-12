@@ -15,6 +15,12 @@ header {
 	width: 9.44vw;
 	height: 3.28vw;
 	margin-left: 5.16vw;
+	cursor: pointer;
+}
+
+a {
+	text-decoration: none;
+	color: var(--text-cream);
 }
 
 .header__logo svg {
